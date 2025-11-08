@@ -115,6 +115,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
         };
+
+        pdf_idou: pdf_idou {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "PDF_IDOU";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(TAB)>, <&kp LS(LC(TAB))>;
+        };
+
+        Excel_idou: Excel_idou {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "EXCEL_IDOU";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(PAGE_UP)>, <&kp LC(PAGE_DOWN)>;
+        };
     };
 };
 
@@ -174,7 +188,7 @@
 
         raise_layer {
             display-name = "Raise";
-            sensor-bindings = <&scroll_down_up>;
+            sensor-bindings = <&pdf_idou>;
             bindings = <
 &trans  &none  &none  &none   &none   &none             &trans  &trans  &trans  &trans            &kp HOME         &none     &none     &none      &none  &none
 &trans  &none  &none  &none   &none   &none             &trans  &trans  &trans  &trans            &kp K_BACK       &none     &none     &none      &none  &none
@@ -216,6 +230,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans  &trans  &trans  &trans                                      &trans  &trans                                  &trans
             >;
+
+            sensor-bindings = <&Excel_idou>;
         };
     };
 };
