@@ -10,11 +10,11 @@
         , <&xiao_d 5 GPIO_ACTIVE_HIGH>//M6
         , <&xiao_d 6 GPIO_ACTIVE_HIGH>//M7
 
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH>//T1
-        , <&xiao_d 8 GPIO_ACTIVE_HIGH>//T2
-        , <&xiao_d 7 GPIO_ACTIVE_HIGH>//T3
-        , <&gpio1 10 GPIO_ACTIVE_HIGH>//T4
-        , <&gpio0 16 GPIO_ACTIVE_HIGH>//T5
+
+        // ▼ここを“D8/D9を使わない”ように変更
+        , <&gpio1 10 GPIO_ACTIVE_HIGH> // T1  ← 旧: xiao_d 9
+        , <&gpio0 16 GPIO_ACTIVE_HIGH> // T2  ← 旧: xiao_d 8
+        , <&xiao_d 7  GPIO_ACTIVE_HIGH> // T3（据え置き or 必要なら入替可）
         ;
     interrupt-gpios = <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;//IGPIO
 };
