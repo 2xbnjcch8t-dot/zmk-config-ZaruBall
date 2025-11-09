@@ -20,5 +20,13 @@
 };
 
 &left_encoder {
+    compatible = "alps,ec11";
+    // キーマトリクスで使わなくなった D8/D9 を割り当て
+    a-gpios = <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+
+    // Zephyrの一般的なプロパティ名は "resolution"
+    resolution = <4>;   // 1ノッチのパルス数。2〜4で好み調整
     status = "okay";
 };
+
