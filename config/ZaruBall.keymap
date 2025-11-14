@@ -91,7 +91,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "F7_F8";
             #binding-cells = <0>;
-            bindings = <&kp F7>, <&kp F8>;
+            bindings = <&kp F7>, <&kp F8>, <&kp F9>;
         };
 
         kagikakko: kagikakko {
@@ -186,11 +186,11 @@
             display-name = "Base";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp GRAVE  &kp N1      &kp F2  &kp N3    &kp N4        &kp N5                        &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                            &f7_f8       &kp F8          &kp N8     &kp N9     &yokobounado  &hatena
-&kp TAB    &kp Q       &kp W   &kp E     &kp R         &kp T                         &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY                          &kp Y        &kp U           &kp I      &kp O      &kp P         &kagikakko
-&kp CAPS   &kp A       &kp S   &kp D     &kp F         &kp G               &kp F2    &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp BACKSPACE         &kp H        &lt 3 J         &kp K      &lt 3 L    &ten_maru     &kp UP_ARROW
-&kp LSHFT  &kp Z       &kp X   &kp C     &kp V         &lt 6 B             &kakko    &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &lt 6 B               &kp N        &mt LEFT_WIN M  &mkp LCLK  &mkp RCLK  &kp LEFT      &kp RIGHT
-&kp LCTRL  &kp C_MUTE          &kp LWIN  &kp LEFT_ALT  &SandS LSHFT SPACE  &mo 6                                                             &mt LEFT_SHIFT SPACE  &lt 5 ENTER                                                      &kp DOWN
+&kp GRAVE  &kp N1      &kp F2  &kp NUMBER_4  &none         &none                         &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                            &f7_f8       &none           &none      &none      &yokobounado  &hatena
+&kp TAB    &kp Q       &kp W   &kp E         &kp R         &kp T                         &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY                          &kp Y        &kp U           &kp I      &kp O      &kp P         &kagikakko
+&kp CAPS   &kp A       &kp S   &kp D         &kp F         &kp G               &kp F2    &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp BACKSPACE         &kp H        &lt 3 J         &kp K      &lt 3 L    &ten_maru     &kp UP_ARROW
+&kp LSHFT  &kp Z       &kp X   &kp C         &kp V         &lt 6 B             &kakko    &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &lt 6 B               &kp N        &mt LEFT_WIN M  &mkp LCLK  &mkp RCLK  &kp LEFT      &kp RIGHT
+&kp LCTRL  &kp C_MUTE          &kp LWIN      &kp LEFT_ALT  &SandS LSHFT SPACE  &mo 6                                                             &mt LEFT_SHIFT SPACE  &lt 5 ENTER                                                      &kp DOWN
             >;
         };
 
@@ -198,11 +198,11 @@
             display-name = "Mouse";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&to_layer_0 ESC     &to_layer_0 N1  &to_layer_0 N2  &to_layer_0 N3  &to_layer_0 N4  &to_layer_0 N5                     &trans  &trans  &trans  &trans                &to_layer_0 N6   &to_layer_0 N7     &to_layer_0 N8  &to_layer_0 N9  &to_layer_0 N0  &kp DEL
-&to_layer_0 TAB     &to_layer_0 Q   &to_layer_0 W   &to_layer_0 E   &to_layer_0 R   &to_layer_0 T                      &trans  &trans  &trans  &trans                &none            &none              &none           &none           &none           &none
-&to_layer_0 CAPS    &to_layer_0 A   &mkp RCLK       &mkp MCLK       &mkp LCLK       &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &none       &kp LC(TAB)      &kp LC(PAGE_UP)    &kp LA(LEFT)    &trans          &kp LA(RIGHT)   &msc SCRL_UP
-&to_layer_0 LSHIFT  &to_layer_0 Z   &to_layer_0 X   &mkp MB4        &mkp MB5        &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &kp LC(F4)  &kp LC(LS(TAB))  &kp LC(PAGE_DOWN)  &mkp LCLK       &mkp RCLK       &msc SCRL_LEFT  &msc SCRL_RIGHT
-&trans              &trans                          &trans          &trans          &trans          &trans                                               &trans      &trans                                                                              &msc SCRL_DOWN
+&to_layer_0 ESC     &to_layer_0 N1  &to_layer_0 N2  &to_layer_0 N3  &to_layer_0 N4  &to_layer_0 N5                     &trans  &trans  &trans  &trans            &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &to_layer_0 N0  &kp KP_NUMLOCK
+&to_layer_0 TAB     &to_layer_0 Q   &to_layer_0 W   &to_layer_0 E   &to_layer_0 R   &to_layer_0 T                      &trans  &trans  &trans  &trans            &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none           &none
+&to_layer_0 CAPS    &to_layer_0 A   &mkp RCLK       &mkp MCLK       &mkp LCLK       &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &none   &none      &kp N7        &kp N8        &kp N9        &kp LA(RIGHT)   &none
+&to_layer_0 LSHIFT  &to_layer_0 Z   &to_layer_0 X   &mkp MB4        &mkp MB5        &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &none   &none      &kp PERIOD    &kp N0        &mkp RCLK     &none           &none
+&trans              &trans                          &trans          &trans          &trans          &trans                                               &trans  &trans                                                               &none
             >;
         };
 
