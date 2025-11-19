@@ -243,6 +243,16 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <75 74>;
         };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <16 0>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <43 75>;
+        };
     };
 
     keymap {
@@ -264,11 +274,11 @@
             display-name = "Mouse";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&to_layer_0 ESC     &to_layer_0 N1  &to_layer_0 N2  &to_layer_0 N3  &to_layer_0 N4  &to_layer_0 N5                     &trans  &trans  &trans  &trans            &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp COLON          &kp KP_NUMLOCK
-&to_layer_0 TAB     &to_layer_0 Q   &to_layer_0 W   &to_layer_0 E   &to_layer_0 R   &to_layer_0 T                      &trans  &trans  &trans  &trans            &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp MINUS          &none
-&to_layer_0 CAPS    &to_layer_0 A   &mkp RCLK       &mkp MCLK       &mkp LCLK       &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &none   &none      &kp N7        &kp N8        &kp N9          &kp DOUBLE_QUOTES  &none
-&to_layer_0 LSHIFT  &to_layer_0 Z   &to_layer_0 X   &mkp MB4        &mkp MB5        &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &none   &none      &kp PERIOD    &kp N0        &kp UNDERSCORE  &kp SLASH          &none
-&trans              &trans                          &trans          &trans          &trans          &trans                                               &trans  &trans                                                                    &none
+&to_layer_0 ESC     &to_layer_0 N1  &to_layer_0 N2  &to_layer_0 N3  &to_layer_0 N4  &to_layer_0 N5                     &trans  &trans  &trans  &trans                   &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp COLON          &kp KP_NUMLOCK
+&to_layer_0 TAB     &to_layer_0 Q   &to_layer_0 W   &to_layer_0 E   &to_layer_0 R   &to_layer_0 T                      &trans  &trans  &trans  &trans                   &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp MINUS          &none
+&to_layer_0 CAPS    &to_layer_0 A   &mkp RCLK       &mkp MCLK       &mkp LCLK       &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &none          &none      &kp N7        &kp N8        &kp N9          &kp DOUBLE_QUOTES  &none
+&to_layer_0 LSHIFT  &to_layer_0 Z   &to_layer_0 X   &mkp MB4        &mkp MB5        &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &none          &none      &kp PERIOD    &kp N0        &kp UNDERSCORE  &kp SLASH          &none
+&trans              &trans                          &trans          &trans          &trans          &trans                                               &kp BACKSPACE  &trans                                                                    &none
             >;
         };
 
